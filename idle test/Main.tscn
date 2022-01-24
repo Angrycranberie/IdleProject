@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Main.vs" type="Script" id=1]
+[ext_resource path="res://Autoclickers.vs" type="Script" id=2]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Clicker" type="Button" parent="."]
+margin_left = 446.0
+margin_top = 59.0
+margin_right = 594.0
+margin_bottom = 91.0
+rect_rotation = 360.031
+text = "make something"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyCounter" type="HBoxContainer" parent="."]
+margin_left = 473.0
+margin_top = 11.0
+margin_right = 544.0
+margin_bottom = 51.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MoneyCounter"]
+margin_top = 13.0
+margin_right = 64.0
+margin_bottom = 27.0
+text = "Science : "
+uppercase = true
+
+[node name="Counter" type="Label" parent="MoneyCounter"]
+margin_left = 68.0
+margin_top = 13.0
+margin_right = 76.0
+margin_bottom = 27.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Autoclickers" type="HBoxContainer" parent="."]
+margin_left = 34.0
+margin_top = 138.0
+margin_right = 146.0
+margin_bottom = 178.0
+grow_vertical = 0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Autoclickers"]
+margin_right = 94.0
+margin_bottom = 40.0
+text = "Auto clicking"
+
+[node name="Label" type="Label" parent="Autoclickers"]
+margin_left = 98.0
+margin_top = 13.0
+margin_right = 106.0
+margin_bottom = 27.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="HBoxContainer" parent="."]
+margin_left = 17.0
+margin_top = 12.0
+margin_right = 60.0
+margin_bottom = 52.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Time"]
+margin_top = 13.0
+margin_right = 31.0
+margin_bottom = 27.0
+text = "time"
+uppercase = true
+
+[node name="Counter" type="Label" parent="Time"]
+margin_left = 35.0
+margin_top = 13.0
+margin_right = 43.0
+margin_bottom = 27.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Clicker" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Autoclickers/Button" to="." method="_on_auto_clicker_pressed"]
