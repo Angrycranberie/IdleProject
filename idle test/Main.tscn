@@ -56,21 +56,42 @@ margin_top = 138.0
 margin_right = 146.0
 margin_bottom = 178.0
 grow_vertical = 0
+custom_constants/separation = 21
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Autoclickers"]
+[node name="b_Achat" type="Button" parent="Autoclickers"]
 margin_right = 94.0
 margin_bottom = 40.0
 text = "Auto clicking"
 
+[node name="b_Upgrade" type="Button" parent="Autoclickers"]
+margin_left = 115.0
+margin_right = 180.0
+margin_bottom = 40.0
+text = "Upgrade"
+
 [node name="Label" type="Label" parent="Autoclickers"]
-margin_left = 98.0
+margin_left = 201.0
 margin_top = 13.0
-margin_right = 106.0
+margin_right = 247.0
+margin_bottom = 27.0
+text = "Level : "
+
+[node name="l_niveau" type="Label" parent="Autoclickers"]
+margin_left = 268.0
+margin_top = 13.0
+margin_right = 276.0
+margin_bottom = 27.0
+text = "0"
+
+[node name="l_Value" type="Label" parent="Autoclickers"]
+margin_left = 297.0
+margin_top = 13.0
+margin_right = 305.0
 margin_bottom = 27.0
 text = "0"
 __meta__ = {
@@ -105,4 +126,5 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Clicker" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Autoclickers/Button" to="." method="_on_auto_clicker_pressed"]
+[connection signal="pressed" from="Autoclickers/b_Achat" to="." method="_on_auto_clicker_pressed"]
+[connection signal="pressed" from="Autoclickers/b_Upgrade" to="Autoclickers" method="_on_Upgrade_pressed"]
