@@ -16,7 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(updateTime(delta)):
-		count += get_node("Autoclickers").get("value")
+		count += get_node("Autoclickers").get("revenu")
 		updateMoneyCounter(str(count))
 
 func updateTime(delta):
@@ -30,9 +30,11 @@ func updateTime(delta):
 		return false
 
 func _on_Clicker_pressed():
-	count = count +1
+	count = count +10
 	updateMoneyCounter(str(count))
 	
 
 func updateMoneyCounter(text):
+	
 	get_node("MoneyCounter/Counter").set_text(text)
+	

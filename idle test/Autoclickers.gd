@@ -1,11 +1,13 @@
 extends HBoxContainer
 
+const baseRevenu = 300
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var level = int(1)
-var value = int(0)
+var level = int(0)
+var revenu = int(0)
+var cost = 600
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,11 +21,17 @@ func _ready():
 #	pass
 
 
-func _on_b_Achat_pressed():
-	value +=1
-	get_node("l_Value").set_text(str(value))
-
 
 func _on_b_Upgrade_pressed():
-	level +=1
-	get_node("l_niveau").set_text(str(level))
+	var a = int(get_parent().get_node("MoneyCounter/Counter").get_text())
+	if( a > cost):
+		get_parent().get_node("MoneyCounter/Counter").set_text(str(a-cost))
+		if(level==0):
+			get_node("b_Upgrade").set_text("upgrade")	
+		level +=1
+		revenu += baseRevenu
+		cost *= 1.07
+		get_node("l_niveau").set_text(str(level))
+		get_node("l_Revenu").set_text(str(revenu))
+	else :
+		pass
