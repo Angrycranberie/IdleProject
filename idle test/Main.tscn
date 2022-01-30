@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://Autoclickers.vs" type="Script" id=2]
+[ext_resource path="res://Autoclickers.gd" type="Script" id=2]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -127,5 +127,5 @@ __meta__ = {
 
 [connection signal="pressed" from="Clicker" to="." method="_on_Clicker_pressed"]
 [connection signal="pressed" from="Clicker" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Autoclickers/b_Achat" to="." method="_on_auto_clicker_pressed"]
-[connection signal="pressed" from="Autoclickers/b_Upgrade" to="Autoclickers" method="_on_Upgrade_pressed"]
+[connection signal="pressed" from="Autoclickers/b_Achat" to="Autoclickers" method="_on_b_Achat_pressed"]
+[connection signal="pressed" from="Autoclickers/b_Upgrade" to="Autoclickers" method="_on_b_Upgrade_pressed"]
