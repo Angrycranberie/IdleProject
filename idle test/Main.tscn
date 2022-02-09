@@ -125,7 +125,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Clicker" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Clicker" to="." method="_on_Clicker_pressed"]
 [connection signal="pressed" from="Autoclickers/b_Achat" to="Autoclickers" method="_on_b_Achat_pressed"]
 [connection signal="pressed" from="Autoclickers/b_Upgrade" to="Autoclickers" method="_on_b_Upgrade_pressed"]

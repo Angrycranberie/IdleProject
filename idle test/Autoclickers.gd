@@ -1,10 +1,8 @@
-extends HBoxContainer
+extends Node
+
+class_name AutoClicker
 
 const baseRevenu = 300
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var level = int(0)
 var revenu = int(0)
 var cost = 600

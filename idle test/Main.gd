@@ -1,18 +1,22 @@
 extends Control
 
 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 var count =int(0)
 var time = float(0.0)
 var second = int(0)
-
+var machine = preload("res://Autoclickers.gd")
+#var clicker1 = Button.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	var autoclicker = machine.new()
+#	clicker1.rect_position = Vector2(500,59)
+#	clicker1.text = "make something"
+#	add_child(clicker1)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(updateTime(delta)):
